@@ -21,6 +21,12 @@
 
     <dependencies>
         <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+            <version>2.1.5.RELEASE</version>
+        </dependency>
+
+        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
@@ -78,6 +84,19 @@
         </dependency>
 
         <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <version>2.9.2</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+            <version>2.9.2</version>
+        </dependency>
+
+        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
@@ -101,11 +120,13 @@
                         <configuration>
                             <sourceRoot>${project.build.directory}/generated-sources/cxf
                             </sourceRoot>
+<!--
                             <wsdlOptions>
                                 <wsdlOption>
                                     <wsdl>${basedir}/src/main/resources/price.wsdl</wsdl>
                                 </wsdlOption>
                             </wsdlOptions>
+                            -->
                         </configuration>
                         <goals>
                             <goal>wsdl2java</goal>

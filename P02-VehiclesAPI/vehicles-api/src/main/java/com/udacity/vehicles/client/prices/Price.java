@@ -1,15 +1,18 @@
 package com.udacity.vehicles.client.prices;
 
 import java.math.BigDecimal;
+import javax.persistence.Id;
 
 /**
  * Represents the price of a given vehicle, including currency.
  */
 public class Price {
 
+    @Id
+    private Long vehicleId;
+
     private String currency;
     private BigDecimal price;
-    private Long vehicleId;
 
     public Price() {
     }
